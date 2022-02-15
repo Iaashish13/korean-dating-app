@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "393822810872",
+    "project_id": "koreandatingapp-5261b",
+    "storage_bucket": "koreandatingapp-5261b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393822810872:android:f207b3b05e016dc891810d",
+        "android_client_info": {
+          "package_name": "com.example.middle_aged_dating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393822810872-2hr8bipvjpf8bnu70u84pask9nkgc80m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD49CALE0Pa8bn4qVD7wK-fCuBAW299gmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393822810872-2hr8bipvjpf8bnu70u84pask9nkgc80m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
