@@ -37,4 +37,8 @@ class AppTextConst {
   static const numberConfirm = '인증번호 6자리';
   static const confirm = '확인';
   static const certificationButton = '인증전';
+  static const myProfileStyle = '[내스타일]';
+  static const hopeArea = '희망지역';
+  static const trial = '시/도';
+  static const country = '군/읍/사';
 }

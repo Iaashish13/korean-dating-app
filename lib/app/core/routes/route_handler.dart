@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:middle_aged_dating/app/features/register/signup_screen.dart';
+import 'package:middle_aged_dating/app/features/register/views/another_signup.dart';
+import 'package:middle_aged_dating/app/features/register/views/signup_screen.dart';
 import 'dart:developer' as devtools show log;
 
 import 'package:middle_aged_dating/app/presentation/intro_screen.dart';
@@ -21,6 +22,9 @@ class RouteHandler {
       case SignUpScreen.routeName:
         return PageTransition(
             child: const SignUpScreen(), type: PageTransitionType.fade);
+      case AnotherSignUpScreen.routeName:
+        return PageTransition(
+            child: const AnotherSignUpScreen(), type: PageTransitionType.fade);
     }
     return MaterialPageRoute(
         builder: (_) => const Text('Cannot found current route'));

@@ -6,7 +6,9 @@ import 'package:middle_aged_dating/app/core/constants/app_fonts.dart';
 import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
 import 'package:middle_aged_dating/app/core/widgets/checkbox.dart';
 import 'package:middle_aged_dating/app/core/widgets/cusotm_button.dart';
+import 'package:middle_aged_dating/app/features/register/views/another_signup.dart';
 import 'package:middle_aged_dating/app/features/register/widgets/birth_widget.dart';
+import 'package:middle_aged_dating/app/features/register/widgets/dropdown_widget.dart';
 import 'package:middle_aged_dating/app/features/register/widgets/password_widget.dart';
 import 'package:middle_aged_dating/app/features/register/widgets/signup_filed.dart';
 
@@ -19,11 +21,11 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final gender = [AppTextConst.male, AppTextConst.female];
+  final _gender = [AppTextConst.male, AppTextConst.female];
 
-  String? choosedValue;
+  String? _choosedGender;
 
-  bool checkBoxValue = false;
+  bool _checkBoxValue = false;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -86,36 +88,52 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               SizedBox(
                                 width: 6.w,
                               ),
-                              Container(
-                                height: 45.h,
-                                padding: EdgeInsets.only(
-                                    left: 10.w, top: 3.h, bottom: 4.h),
-                                color: Colors.white,
-                                child: DropdownButton<String>(
-                                  value: choosedValue,
-                                  focusColor: Colors.white,
-                                  underline: Container(
-                                    color: Colors.white,
-                                  ),
-                                  iconSize: 60,
-                                  icon: Container(
-                                    alignment: Alignment.topCenter,
-                                    padding: EdgeInsets.only(bottom: 16.h),
-                                    child: const Icon(Icons.arrow_drop_down),
-                                  ),
-                                  iconEnabledColor: Colors.black,
-                                  iconDisabledColor: Colors.black,
-                                  items: gender
-                                      .map((valueItem) => DropdownMenuItem(
-                                            child: Text(valueItem),
-                                            value: valueItem,
-                                          ))
-                                      .toList(),
-                                  onChanged: (newValue) => setState(
-                                    () => choosedValue = newValue,
-                                  ),
-                                ),
+                              CustomDropDownGeneric<String>(
+                                desiredList: _gender,
+                                selectedValue: _choosedGender,
+                                onChanged: <String>(val) {
+                                  setState(() {
+                                    _choosedGender = val.toString();
+                                  });
+                                },
                               ),
+                              // CustomDropDownGender<String>(
+                              //   onChanged: (e) {
+                              //     print(e);
+                              //   },
+                              //   desiredList: gender,
+                              //   selectedValue: choosedGender,
+                              // ),
+                              // Container(
+                              //   height: 45.h,
+                              //   padding: EdgeInsets.only(
+                              //       left: 10.w, top: 3.h, bottom: 4.h),
+                              //   color: Colors.white,
+                              //   child: DropdownButton<String>(
+                              //     value: choosedValue,
+                              //     focusColor: Colors.white,
+                              //     underline: Container(
+                              //       color: Colors.white,
+                              //     ),
+                              //     iconSize: 54.h,
+                              //     icon: Container(
+                              //       alignment: Alignment.topCenter,
+                              //       padding: EdgeInsets.only(bottom: 16.h),
+                              //       child: const Icon(Icons.arrow_drop_down),
+                              //     ),
+                              //     iconEnabledColor: Colors.black,
+                              //     iconDisabledColor: Colors.black,
+                              //     items: gender
+                              //         .map((valueItem) => DropdownMenuItem(
+                              //               child: Text(valueItem),
+                              //               value: valueItem,
+                              //             ))
+                              //         .toList(),
+                              //     onChanged: (newValue) => setState(
+                              //       () => choosedValue = newValue,
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                           Row(
@@ -185,14 +203,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   AppFonts.nameAndButton),
                             ),
                           )
-                          // GestureDetector(
-                          //   onTap: () {},
-                          //   child: Image.asset(
-                          //     'assets/before-certification.png',
-                          //     height: 40.h,
-                          //     width: 100.w,
-                          //   ),
-                          // ),
                         ],
                       ),
                       SizedBox(
@@ -218,7 +228,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 50.h,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context)
+                      .pushNamed(AnotherSignUpScreen.routeName);
+                },
                 child: Image.asset(
                   AppAssets.nextButton,
                   height: 70.h,

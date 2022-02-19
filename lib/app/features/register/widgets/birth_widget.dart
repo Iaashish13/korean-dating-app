@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:middle_aged_dating/app/core/constants/app_fonts.dart';
 import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
+import 'package:middle_aged_dating/app/features/register/widgets/dropdown_widget.dart';
 
 class BirthWidget extends StatefulWidget {
   const BirthWidget({Key? key}) : super(key: key);
@@ -29,29 +30,14 @@ class _BirthWidgetState extends State<BirthWidget> {
           height: 45.h,
           padding: EdgeInsets.only(left: 20.w, top: 3.h, bottom: 4.h),
           color: Colors.white,
-          child: DropdownButton<String>(
-            value: choosedDate,
-            focusColor: Colors.white,
-            underline: Container(
-              color: Colors.white,
-            ),
-            iconSize: 60,
-            icon: Container(
-              alignment: Alignment.topCenter,
-              padding: EdgeInsets.only(bottom: 16.h),
-              child: const Icon(Icons.arrow_drop_down),
-            ),
-            iconEnabledColor: Colors.black,
-            iconDisabledColor: Colors.black,
-            items: dates
-                .map((valueItem) => DropdownMenuItem(
-                      child: Text(valueItem),
-                      value: valueItem,
-                    ))
-                .toList(),
-            onChanged: (newValue) => setState(
-              () => choosedDate = newValue,
-            ),
+          child: CustomDropDownGeneric(
+            desiredList: dates,
+            onChanged: <String>(val) {
+              setState(() {
+                choosedDate = val.toString();
+              });
+            },
+            selectedValue: choosedDate,
           ),
         ),
         SizedBox(

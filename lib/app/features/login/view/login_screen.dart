@@ -8,7 +8,7 @@ import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
 import 'package:middle_aged_dating/app/core/widgets/cusotm_button.dart';
 
 import 'package:middle_aged_dating/app/core/widgets/textfield.dart';
-import 'package:middle_aged_dating/app/features/register/signup_screen.dart';
+import 'package:middle_aged_dating/app/features/register/views/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String routeName = '/login_screen';

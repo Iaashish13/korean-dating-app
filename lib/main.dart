@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:middle_aged_dating/app/features/register/signup_screen.dart';
+import 'package:middle_aged_dating/app/features/register/views/signup_screen.dart';
 import 'app/core/routes/route_handler.dart';
 
 void main() async {
@@ -29,5 +29,16 @@ class MyApp extends StatelessWidget {
             child: widget!),
       ),
     );
+  }
+}
+
+extension ItemAtIndexOrNull<T> on Iterable<T> {
+  itemAtIndexOrNull(int index) {
+    try {
+      final data = this.elementAt(index);
+      return data;
+    } catch (e) {
+      return null;
+    }
   }
 }
