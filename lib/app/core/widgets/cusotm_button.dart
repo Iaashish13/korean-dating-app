@@ -4,20 +4,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:middle_aged_dating/app/core/constants/app_fonts.dart';
 
 class CustomButtons {
-  Widget roundedElevatedButton(
-    String text,
-    VoidCallback? onPresed,
-    Color? backgroundColor,
-    Color? foregroundColor,
-    TextStyle? textStyle,
-  ) {
+  Widget roundedElevatedButton(String text, VoidCallback? onPresed,
+      Color? backgroundColor, Color? foregroundColor, TextStyle? textStyle,
+      {double? borderRadius, EdgeInsetsGeometry? padding}) {
     return ElevatedButton(
       onPressed: onPresed,
       child: Text(text),
       style: ButtonStyle(
+        elevation: MaterialStateProperty.all<double?>(0),
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(padding),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
           ),
         ),
         backgroundColor: MaterialStateProperty.all<Color?>(backgroundColor),

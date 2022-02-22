@@ -63,4 +63,19 @@ class AppFonts {
     fontWeight: FontWeight.w200,
     fontSize: 24.sp,
   );
+  static TextStyle nameAndButtonB = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+    color: Colors.white,
+  );
+  static TextStyle anotherSignupG = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+    color: Colors.yellow,
+  );
+  static TextStyle divorceSingleB = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+    color: Colors.yellow,
+  );
 }

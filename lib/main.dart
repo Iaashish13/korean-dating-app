@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 extension ItemAtIndexOrNull<T> on Iterable<T> {
   itemAtIndexOrNull(int index) {
     try {
-      final data = this.elementAt(index);
+      final data = elementAt(index);
       return data;
     } catch (e) {
       return null;

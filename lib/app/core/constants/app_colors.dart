@@ -11,4 +11,5 @@ class AppColors {
   static const Color lastContainerColor = Color(0xff369e9a);
   static const Color signUpContaainerColor = Color(0xff787b88);
   static const Color adultVerificationButtonColor = Color(0xffbddf82);
+  static const Color ppContainerColor = Color(0xffAEADAE);
 }

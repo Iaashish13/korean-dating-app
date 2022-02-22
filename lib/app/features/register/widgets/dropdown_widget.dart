@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
 
 class CustomDropDownGeneric<T> extends StatefulWidget {
   final ValueChanged<T?>? onChanged;
   final List<T> desiredList;
   final T? selectedValue;
+  final T? hintText;
 
   const CustomDropDownGeneric({
     Key? key,
-    required this.desiredList,
     required this.onChanged,
+    required this.desiredList,
     this.selectedValue,
+    this.hintText,
   }) : super(key: key);
 
   @override
@@ -19,13 +20,13 @@ class CustomDropDownGeneric<T> extends StatefulWidget {
 }
 
 class _CustomDropDownGenericState<T> extends State<CustomDropDownGeneric> {
-  T? currentChoosedValue;
+  // T? currentChoosedValue;
 
-  @override
-  void initState() {
-    currentChoosedValue = widget.selectedValue;
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   currentChoosedValue = widget.selectedValue;
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +35,7 @@ class _CustomDropDownGenericState<T> extends State<CustomDropDownGeneric> {
       padding: EdgeInsets.only(left: 10.w, top: 3.h, bottom: 4.h),
       color: Colors.white,
       child: DropdownButton<T>(
+        hint: Text(widget.hintText ?? ''),
         value: widget.selectedValue,
         focusColor: Colors.white,
         underline: Container(
