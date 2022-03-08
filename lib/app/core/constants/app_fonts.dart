@@ -78,4 +78,47 @@ class AppFonts {
     fontSize: 20.sp,
     color: Colors.yellow,
   );
+  static TextStyle genderAndAge = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 18.sp,
+    color: Colors.black,
+  );
+  static TextStyle heartFont = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 18.sp,
+    color: AppColors.heartColor,
+  );
+  static TextStyle nickNameStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16.sp,
+    color: Colors.white,
+  );
+  static TextStyle memberStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14.sp,
+    color: Colors.black,
+  );
+  static TextStyle termsFont = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 24.sp,
+    color: Colors.black,
+    letterSpacing: 2,
+  );
+  static TextStyle privacyPolicy = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 15.sp,
+    color: Colors.black,
+    letterSpacing: 1.2,
+  );
+  static TextStyle privacyPolicyColorful = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 15.sp,
+    color: AppColors.agreeMentPinkColor,
+    letterSpacing: 1.2,
+  );
+  static TextStyle earnedStyle = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 14.sp,
+    color: Colors.black,
+  );
 }

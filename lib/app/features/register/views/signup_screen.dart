@@ -4,7 +4,7 @@ import 'package:middle_aged_dating/app/core/constants/app_assets.dart';
 import 'package:middle_aged_dating/app/core/constants/app_colors.dart';
 import 'package:middle_aged_dating/app/core/constants/app_fonts.dart';
 import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
-import 'package:middle_aged_dating/app/core/widgets/checkbox.dart';
+import 'package:middle_aged_dating/app/core/widgets/custom_checkbox.dart';
 import 'package:middle_aged_dating/app/core/widgets/cusotm_button.dart';
 import 'package:middle_aged_dating/app/features/register/views/another_signup.dart';
 import 'package:middle_aged_dating/app/features/register/widgets/birth_widget.dart';
@@ -25,7 +25,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   String? _choosedGender;
 
-  bool _checkBoxValue = false;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

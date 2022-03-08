@@ -1,7 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:middle_aged_dating/app/features/femalechat/views/female_chat_screen.dart';
+import 'package:middle_aged_dating/app/features/malechat/views/male_chat_screen.dart';
 import 'package:middle_aged_dating/app/features/register/views/signup_screen.dart';
+import 'package:middle_aged_dating/app/presentation/agree_terms.dart';
+import 'package:middle_aged_dating/app/presentation/intro_screen.dart';
 import 'app/core/routes/route_handler.dart';
 
 void main() async {
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: RouteHandler.handleRoute,
-        home: const SignUpScreen(),
+        home: IntroScreen(),
         builder: (context, widget) => MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
             child: widget!),

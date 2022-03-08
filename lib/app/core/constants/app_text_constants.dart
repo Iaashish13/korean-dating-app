@@ -62,4 +62,34 @@ class AppTextConst {
   static const noViolentImage = '"음란/혐오 / 폭력 이미지 금지"';
   static const reviewByOperator = '"운영자 검토 후 게재됩니다"';
   static const joining = '가입하기';
+  static const male62yearsold = '(남) 62세';
+  static const heart = '하트';
+  static const nickNameChatScreen = '내닉네임';
+  static const nickNameofPerson = '경기도 안산기';
+  static const dosling = '돌싱';
+  static const chubby = '통통함';
+
+  static const likestoDrink = '술좋아함';
+  static const maleMember = '남성회원';
+  static const femaleMember = '여성회원';
+  static const area = '지역';
+  static const age = '나이';
+  static const twentytwoyearsOld = '22세';
+  static const welcomeText = '반가와...';
+  static const termsOfUse = '[서비스 이용약관] ';
+  static const termsOfUse2 = ' (내용보기) ';
+  static const termsOfUse3 = '동의(필수)';
+
+  static const privacyPolicy = '[개인정보 처리방침] ';
+  static const privacyPolicy2 = '(내용보기) ';
+  static const privacyPolicy3 = '동의 (필수)';
+
+  static const userRules = '[이용자 수칙] ';
+  static const userRules2 = '(내용보기) ';
+  static const userRules3 = '동의(필수)';
+  static const serviceInformation = '[서비스 안내]';
+  static const earned = '적립';
+  static const won = '원';
+  static const cashExchange = '현금교환';
+  static const recommend = '추천';
 }

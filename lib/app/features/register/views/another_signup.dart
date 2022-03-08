@@ -4,8 +4,9 @@ import 'package:middle_aged_dating/app/core/constants/app_assets.dart';
 import 'package:middle_aged_dating/app/core/constants/app_colors.dart';
 import 'package:middle_aged_dating/app/core/constants/app_fonts.dart';
 import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
-import 'package:middle_aged_dating/app/core/widgets/checkbox.dart';
+import 'package:middle_aged_dating/app/core/widgets/custom_checkbox.dart';
 import 'package:middle_aged_dating/app/core/widgets/cusotm_button.dart';
+import 'package:middle_aged_dating/app/features/malechat/views/male_chat_screen.dart';
 import 'package:middle_aged_dating/app/features/register/widgets/dropdown_widget.dart';
 
 class AnotherSignUpScreen extends StatefulWidget {
@@ -65,14 +66,15 @@ class _AnotherSignUpScreenState extends State<AnotherSignUpScreen> {
                             }),
                         const Spacer(),
                         CustomDropDownGeneric(
-                            hintText: AppTextConst.country,
-                            desiredList: const ["korea", "nepal", "india"],
-                            selectedValue: _selectedCountry,
-                            onChanged: <String>(val) {
-                              setState(() {
-                                _selectedCountry = val.toString();
-                              });
-                            }),
+                          hintText: AppTextConst.country,
+                          desiredList: const ["korea", "nepal", "india"],
+                          selectedValue: _selectedCountry,
+                          onChanged: <String>(val) {
+                            setState(() {
+                              _selectedCountry = val.toString();
+                            });
+                          },
+                        ),
                       ],
                     ),
                     SizedBox(
@@ -343,11 +345,9 @@ class _AnotherSignUpScreenState extends State<AnotherSignUpScreen> {
             SizedBox(
               height: 10.h,
             ),
-            CustomButtons().roundedElevatedButton(
-                AppTextConst.joining,
-                () {},
-                Colors.blue.shade400,
-                Colors.white,
+            CustomButtons().roundedElevatedButton(AppTextConst.joining, () {
+              Navigator.pushNamed(context, MaleChatScreen.routeName);
+            }, Colors.blue.shade400, Colors.white,
                 AppFonts.nameAndButtonB.copyWith(fontSize: 26.sp),
                 padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 6.w),
                 borderRadius: 6)

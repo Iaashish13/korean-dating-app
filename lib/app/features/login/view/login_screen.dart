@@ -8,7 +8,9 @@ import 'package:middle_aged_dating/app/core/constants/app_text_constants.dart';
 import 'package:middle_aged_dating/app/core/widgets/cusotm_button.dart';
 
 import 'package:middle_aged_dating/app/core/widgets/textfield.dart';
+import 'package:middle_aged_dating/app/features/femalechat/views/female_chat_screen.dart';
 import 'package:middle_aged_dating/app/features/register/views/signup_screen.dart';
+import 'package:middle_aged_dating/app/presentation/agree_terms.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String routeName = '/login_screen';
@@ -80,7 +82,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       CustomElevatedB(
                         buttonName: AppTextConst.logIn,
                         primaryColor: AppColors.loginbuttonColor,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(FemaleChatScreen.routeName);
+                        },
                       ),
                       SizedBox(
                         height: 12.h,
@@ -90,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         primaryColor: AppColors.signUpbuttonColor,
                         onPressed: () {
                           Navigator.of(context)
-                              .pushNamed(SignUpScreen.routeName);
+                              .pushNamed(AgreeTermsScreen.routeName);
                         },
                       ),
                       SizedBox(
